@@ -1,0 +1,42 @@
+<footer class="site-footer">
+  <div id="wcb" class="wcb carbonbadge"></div>
+<script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
+
+  {{ if or (site.GetPage "terms.md") (site.GetPage "privacy.md") }}
+  <p class="powered-by">
+    {{ with site.GetPage "privacy.md" }}
+      {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
+    {{ end }}
+    {{ with site.GetPage "terms.md" }}
+      {{ if site.GetPage "privacy.md" }} &middot; {{ end }}
+      {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
+    {{ end }}
+  </p>
+  {{ end }}
+
+  <p class="powered-by">
+    {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} &middot; {{ end }}
+   
+    
+    © 2020 Tony Lam <br />
+    <br />
+    Hosted on
+    <a href="https://github.com/lamtonylam/website/" target="_blank" rel="noopener">Github</a><br />
+    <br />
+    Deployed on
+    <a href="https://netlify.com" target="_blank" rel="noopener">Netlify</a><br />
+    <br />
+    Images optimized by
+    <a href="https://imgbot.net/" target="_blank" rel="noopener">Imgbot</a><br />
+
+    {{ if not (in (slice "docs" "updates") .Type) }}
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    {{ end }}
+  </p>
+</footer>
