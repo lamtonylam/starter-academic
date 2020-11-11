@@ -7,7 +7,7 @@ authors:
 
 date: "2020-10-10"
 featured: false
-draft: false
+draft: true
 
 reading_time: true  # Show estimated reading time?
 share: true  # Show social sharing links?

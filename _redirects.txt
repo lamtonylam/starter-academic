@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+/home              /
+/linkedin          https://linkedin.com/in/lamtonylam/
+/insta             https://www.instagram.com/_lamtony/
+/snap              https://www.snapchat.com/add/offical_tony
