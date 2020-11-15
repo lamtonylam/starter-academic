@@ -18,8 +18,7 @@
     {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} &middot; {{ end }}
    
     
-    © 2020 Tony Lam <br />
-    <br />
+    
     Hosted on
     <a href="https://github.com/lamtonylam/website/" target="_blank" rel="noopener">Github</a><br />
     <br />
@@ -28,6 +27,8 @@
     <br />
     Images optimized by
     <a href="https://imgbot.net/" target="_blank" rel="noopener">Imgbot</a><br />
+    Theme by: 
+    <a href="https://wowchemy.com/" target="_blank" rel="noopener">Wowchemy</a><br />
 
     {{ if not (in (slice "docs" "updates") .Type) }}
     <span class="float-right" aria-hidden="true">
