@@ -232,69 +232,122 @@ function filter_publications() {
 /* ---------------------------------------------------------------------------
 * Google Maps or OpenStreetMap via Leaflet.
 * --------------------------------------------------------------------------- */
+mapboxgl.accessToken = 'pk.eyJ1IjoiZWluZXMiLCJhIjoiY2toa3ZkaDBwMDByYTJ2cm51M2tidXp1cCJ9.vF1xEAD5Iuu0jR31UOu5VA';
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/mapbox/streets-v11?optimize=true', //stylesheet location
+center: [24.964935, 60.290658], // starting position
+zoom: 8,// starting zoom
+maxZoom:10.5,
 
-function initMap() {
-  if ($('#map').length) {
-    let map_provider = $('#map-provider').val();
-    let lat = $('#map-lat').val();
-    let lng = $('#map-lng').val();
-    let zoom = parseInt($('#map-zoom').val());
-    let address = $('#map-dir').val();
-    let api_key = $('#map-api-key').val();
+});
 
-    if (map_provider == 1) {
-      let map = new GMaps({
-        div: '#map',
-        lat: lat,
-        lng: lng,
-        zoom: zoom,
-        zoomControl: true,
-        zoomControlOpt: {
-          style: 'SMALL',
-          position: 'TOP_LEFT'
-        },
-        panControl: false,
-        streetViewControl: false,
-        mapTypeControl: false,
-        overviewMapControl: false,
-        scrollwheel: true,
-        draggable: true
-      });
 
-      map.addMarker({
-        lat: lat,
-        lng: lng,
-        click: function (e) {
-          let url = 'https://www.google.com/maps/place/' + encodeURIComponent(address) + '/@' + lat + ',' + lng + '/';
-          window.open(url, '_blank')
-        },
-        title: address
-      })
-    } else {
-      let map = new L.map('map').setView([lat, lng], zoom);
-      if (map_provider == 3 && api_key.length) {
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-          tileSize: 512,
-          maxZoom: 18,
-          zoomOffset: -1,
-          id: 'mapbox/streets-v11',
-          accessToken: api_key
-        }).addTo(map);
-        map.scrollZoom.disable();
-      } else {
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-      }
-      let marker = L.marker([lat, lng]).addTo(map);
-      let url = lat + ',' + lng + '#map=' + zoom + '/' + lat + '/' + lng + '&layers=N';
-      marker.bindPopup(address + '<p><a href="https://www.openstreetmap.org/directions?engine=osrm_car&route=' + url + '">Routing via OpenStreetMap</a></p>');
-    }
-  }
+// disable map zoom when using scroll
+map.scrollZoom.disable();
+// disable map rotation using right click + drag
+map.dragRotate.disable();
+// add full screen
+map.addControl(new mapboxgl.FullscreenControl());
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+var size = 200;
+ 
+// implementation of CustomLayerInterface to draw a pulsing dot icon on the map
+// see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
+var pulsingDot = {
+width: size,
+height: size,
+data: new Uint8Array(size * size * 4),
+ 
+// get rendering context for the map canvas when layer is added to the map
+onAdd: function () {
+var canvas = document.createElement('canvas');
+canvas.width = this.width;
+canvas.height = this.height;
+this.context = canvas.getContext('2d');
+},
+ 
+// called once before every frame where the icon will be used
+render: function () {
+var duration = 1000;
+var t = (performance.now() % duration) / duration;
+ 
+var radius = (size / 2) * 0.3;
+var outerRadius = (size / 2) * 0.7 * t + radius;
+var context = this.context;
+ 
+// draw outer circle
+context.clearRect(0, 0, this.width, this.height);
+context.beginPath();
+context.arc(
+this.width / 2,
+this.height / 2,
+outerRadius,
+0,
+Math.PI * 2
+);
+context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')';
+context.fill();
+ 
+// draw inner circle
+context.beginPath();
+context.arc(
+this.width / 2,
+this.height / 2,
+radius,
+0,
+Math.PI * 2
+);
+context.fillStyle = 'rgba(255, 100, 100, 1)';
+context.strokeStyle = 'white';
+context.lineWidth = 2 + 4 * (1 - t);
+context.fill();
+context.stroke();
+ 
+// update this image's data with data from the canvas
+this.data = context.getImageData(
+0,
+0,
+this.width,
+this.height
+).data;
+ 
+// continuously repaint the map, resulting in the smooth animation of the dot
+map.triggerRepaint();
+ 
+// return `true` to let the map know that the image was updated
+return true;
 }
-
+};
+ 
+map.on('load', function () {
+map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+ 
+map.addSource('points', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'geometry': {
+'type': 'Point',
+'coordinates': [24.964935, 60.290658]
+}
+}
+]
+}
+});
+map.addLayer({
+'id': 'points',
+'type': 'symbol',
+'source': 'points',
+'layout': {
+'icon-image': 'pulsing-dot'
+}
+});
+});
 /* ---------------------------------------------------------------------------
  * GitHub API.
  * --------------------------------------------------------------------------- */
