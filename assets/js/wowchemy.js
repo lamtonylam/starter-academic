@@ -233,6 +233,10 @@ function filter_publications() {
 * Google Maps or OpenStreetMap via Leaflet.
 * --------------------------------------------------------------------------- */
 mapboxgl.accessToken = 'pk.eyJ1IjoiZWluZXMiLCJhIjoiY2toa3ZkaDBwMDByYTJ2cm51M2tidXp1cCJ9.vF1xEAD5Iuu0jR31UOu5VA';
+// WEBGL alert if not supported
+if (!mapboxgl.supported()) {
+  alert('Your browser does not support Mapbox GL');
+  } else
 var map = new mapboxgl.Map({
 container: 'map', // container id
 style: 'mapbox://styles/mapbox/streets-v11?optimize=true', //stylesheet location
@@ -240,8 +244,12 @@ center: [24.964935, 60.290658], // starting position
 zoom: 8,// starting zoom
 maxZoom:10.5,
 
+
 });
 
+
+//add touchpitch
+map.touchPitch.enable();
 
 // disable map zoom when using scroll
 map.scrollZoom.disable();
