@@ -24,7 +24,7 @@ Netlify build status, should be "Success"
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43a8e219-6710-4142-aed9-79413987332b/deploy-status)](https://app.netlify.com/sites/tonylam/deploys)
 
 
-Commits to this site's Github repo
+Commits to this site's Github {{< icon name="github" pack="fab" >}} repo
 <div id='commits' data-path='src/io/trivium/extension/'></div>
 <script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
 <script>
@@ -48,7 +48,7 @@ $.ajax({type:'GET',
 }});
 </script>
 
-GitHub contributions calendar
+GitHub {{< icon name="github" pack="fab" >}} contributions calendar
 <!-- Include the library. -->
 <script
   src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
