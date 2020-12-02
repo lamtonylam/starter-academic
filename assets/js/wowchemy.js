@@ -247,9 +247,25 @@ maxZoom:10.5,
 
 });
 
+// https://github.com/mapbox/mapbox-gl-js/pull/9852 mobile scrolling
+map.dragPan._touchPan._minTouches = 2;
 
-//add touchpitch
-map.touchPitch.enable();
+function touchmove(e, points, mapTouches) {
+  if (!this._active) return;
+
+  if (e.targetTouches.length >= this._minTouches) {
+    e.preventDefault();
+  }
+
+  return this._calculateTransform(e, points, mapTouches);
+}
+
+ map.dragPan._touchPan.touchmove = touchmove.bind(map.dragPan._touchPan);
+
+map.touchZoomRotate.disableRotation();
+map.touchPitch.disable();
+
+
 
 // disable map zoom when using scroll
 map.scrollZoom.disable();

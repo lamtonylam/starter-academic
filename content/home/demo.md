@@ -13,7 +13,7 @@ headless: true
 weight: 999
 
 
-subtitle: 
+subtitle:
 design:
   columns: "1"
   
