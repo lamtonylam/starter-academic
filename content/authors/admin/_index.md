@@ -43,12 +43,18 @@ social:
 - icon: envelope
   icon_pack: fas
   link: https://rebrand.ly/0e10hjw 
+  label: Email me!
+  display:
+    header: true
 - icon: twitter
   icon_pack: fab
   link: https://rebrand.ly/24934
 - icon: linkedin
   icon_pack: fab
   link: https://rebrand.ly/6l7w1u3
+  label: Connect with me on LinkedIn!
+  display:
+    header: true
 - icon: github
   icon_pack: fab
   link: https://rebrand.ly/5ad68
