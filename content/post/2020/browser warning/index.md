@@ -1,17 +1,17 @@
 ---
-title: 'Click here to get Rick Rolled!'
-subtitle: Testing Youtube.
-summary: Testing Youtube.
+title: 'Please use Chrome or Firefox for the optimal viewing expierience!'
+subtitle:
+summary: 'Eww, Internet Explorer 9 :sob:'
 authors:
 - admin
 
-date: "2020-10-10"
+date: "2020-12-28"
 featured: false
-draft: true
+draft: false
 
 reading_time: true  # Show estimated reading time?
-share: true  # Show social sharing links?
-profile: true  # Show author profile?
+share: false  # Show social sharing links?
+profile: false  # Show author profile?
 commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
 editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
 
@@ -32,6 +32,6 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 ---
-Haha :D
-
-{{< youtube dQw4w9WgXcQ >}}
+Yeah, this is what it looks like on Internet Explorer 9 :D
+{{< figure src="img1.jpeg" lightbox="false" >}}
+IE is bad, because it can’t be updated over the air. IE lacks many website technologies that are considered a must have these days, it is 2020!
