@@ -20,9 +20,10 @@ design:
   spacing:
     padding: ["20px", "0", "20px", "0"]
 ---
-Netlify build status, should be "Success"
-[![Netlify Status](https://api.netlify.com/api/v1/badges/43a8e219-6710-4142-aed9-79413987332b/deploy-status)](https://app.netlify.com/sites/tonylam/deploys)
+Netlify build status, should be "Success", unless something went wrong.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3e5096e3-937e-4885-9aa0-85a3cf1dfefc/deploy-status)](https://app.netlify.com/sites/tonylam/deploys)
 
+<br/>
 
 Commits to this site's Github {{< icon name="github" pack="fab" >}} repo
 <div id='commits' data-path='src/io/trivium/extension/'></div>
