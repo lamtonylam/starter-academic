@@ -83,11 +83,7 @@ I'm creative, curious, positive, and a fast learner.
 
 For the most up to date information about me, please refer to my LinkedIn profile.
 
-<a href="https://fi.linkedin.com/in/lamtonylam/">Click here to visit my LinkedIn profile!</a>
-
-
-
-
+{{< cta cta_text="Click here to visit my LinkedIn profile!" cta_link="https://fi.linkedin.com/in/lamtonylam" cta_new_tab="true" >}}
 
 <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="lamtonylam"><a class="LI-simple-link" href='https://fi.linkedin.com/in/lamtonylam?trk=profile-badge'>Tony Lam</a></div>
 

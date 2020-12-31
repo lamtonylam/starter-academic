@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 date: "2018-06-28T00:00:00+01:00"
-draft: true
+draft: false
 share: false
 commentable: false
 editable: false
@@ -11,5 +11,7 @@ header:
   caption: ""
   image: ""
 ---
+Embedded:
+{{< gdocs src="https://docs.google.com/document/d/e/2PACX-1vQKMZrxLU1HtyBa3nTszGEUoAimk190anWUEhJHbXEqawBXTTlosoj4VZYQJeE4CDKgf_HXdil09WUs/pub" >}}
 
-Add your privacy policy here and set `draft: false` to publish it. Otherwise, delete this file if you don't need it.
+If it is not visible please visit at: https://docs.google.com/document/d/e/2PACX-1vQKMZrxLU1HtyBa3nTszGEUoAimk190anWUEhJHbXEqawBXTTlosoj4VZYQJeE4CDKgf_HXdil09WUs/pub
