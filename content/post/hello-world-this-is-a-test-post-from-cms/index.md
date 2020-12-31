@@ -14,3 +14,13 @@ Hello there!
 
 
 ![](minh-pham-ltqmgx8tyqm-unsplash.jpg)
+
+<img
+data-src="https://res.cloudinary.com/dp4kpirzy/image/upload/v1609450468/sample.jpg"
+alt=""
+class="cld-responsive"/>
+
+<script>
+const cl = cloudinary.Cloudinary.new({ cloud_name: 'YOUR_CLOUD_NAME' })
+cl.responsive()
+<script/>
