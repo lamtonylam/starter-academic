@@ -24,3 +24,15 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
+    
+[[redirects]]
+from = "/opkh"
+to = "https://ehdokas.tonylam.tech"
+status = 301
+force = false
+
+[[redirects]]
+from = "/linkedin"
+to = "https://linkedin.com/in/lamtonylam"
+status = 301
+force = false
