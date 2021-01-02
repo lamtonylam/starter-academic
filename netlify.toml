@@ -24,7 +24,7 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
-    
+# REDIRECTS custom    
 [[redirects]]
 from = "/opkh"
 to = "https://ehdokas.tonylam.tech"
@@ -34,5 +34,11 @@ force = false
 [[redirects]]
 from = "/linkedin"
 to = "https://linkedin.com/in/lamtonylam"
+status = 301
+force = false
+
+[[redirects]]
+from = "https://www.tonylam.digital/*"
+to = "https://tonylam.digital/:splat"
 status = 301
 force = false
