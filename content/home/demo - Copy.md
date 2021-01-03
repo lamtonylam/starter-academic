@@ -10,7 +10,7 @@ active: true
 headless: true
 
 # Order that this section appears on the page.
-weight: 999
+weight: 9999
 
 
 subtitle:
@@ -18,8 +18,11 @@ design:
   columns: "1"
   
   spacing:
-    padding: ["20px", "0", "20px", "0"]
+    padding: ["20px", "0", "0px", "0"]
 ---
-Netlify build status, should be "Success", unless something went wrong.
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3e5096e3-937e-4885-9aa0-85a3cf1dfefc/deploy-status)](https://app.netlify.com/sites/tonylam/deploys)
+###### What I'm listening to on Spotify:
 
+Actually it's what I last listened to. API is hosted on Vercel https://tonylam.vercel.app/
+
+
+[![Spotify](https://tonylam.vercel.app/api/spotify)](https://open.spotify.com/user/le7cq1olyeuvjxgd17jtnno1f)
