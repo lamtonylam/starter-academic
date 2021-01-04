@@ -265,6 +265,7 @@ function initMap() {
         },
         streetViewControl: false,
         mapTypeControl: false,
+        gestureHandling: "cooperative",
         maxZoom: 10,
       });
 
