@@ -89,7 +89,7 @@ show_related = {docs = true, page = false, post = true, project = true, publicat
 
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "tony.lam@iki.fi"
-phone = ""
+phone = "+358458925360"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
@@ -106,15 +106,17 @@ office_hours = []
 
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = ""
+appointment_url = "https://rebrand.ly/jafhsyo"
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  
   #{icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
-  {icon = "whatsapp", icon_pack = "fab", name = "Whatsapp me", link = "https://wa.me/358458925360"},
+  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:lamtonylam?call"},
+  #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
+  #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/mangoflamingo"},
+  {icon = "line", icon_pack = "fab", name = "Line", link = "http://line.me/ti/p/~einesruoka" }
   ]
 
 ############################
