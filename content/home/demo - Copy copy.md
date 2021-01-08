@@ -10,21 +10,19 @@ active: true
 headless: true
 
 # Order that this section appears on the page.
-weight: 998
+weight: 997
 
 
 subtitle:
 design:
   columns: "1"
   spacing:
-    padding: ["20px", "0", "20px", "0"]
+    padding: ["0px", "0", "0px", "0"]
 ---
-<center>
-<h1>What I'm listening to on Spotify: </h1>
+<center> Phone number: </center>
+{{< figure library="true" src="puhelin.png" lightbox="false" width="40%" >}}
+<center>  
+It's an image btw, so that bots can't scrape my number.
 
-<p>API is hosted on Vercel https://tonylam.vercel.app/</p>
-
-
-[![Spotify](https://tonylam.vercel.app/api/spotify)](https://open.spotify.com/user/le7cq1olyeuvjxgd17jtnno1f)
-
-<center/>
+Me :one:, bots :zero:, hahaa! :sunglasses:
+</center>

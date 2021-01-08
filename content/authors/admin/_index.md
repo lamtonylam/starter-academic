@@ -23,14 +23,14 @@ bio: My interests include programming, ICT and gaming.
 interests:
 - ICT
 - Coding
-- E-sports
+- Gaming and PC-building
 - Finding the best burgers in the whole universe ;D
 
 education:
   courses:
   - course: Finnish Matriculation Examination
     institution: Helsinki High School of Natural Sciences / Helsingin luonnontiedelukio
-    year: 2020-2023
+    year: 2020-2023 (ongoing)
   - course: Basic education
     institution: Veromäen koulu / Veromäki comprehensive school 
     year: 2020, Graduated
