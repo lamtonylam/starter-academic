@@ -8,6 +8,9 @@
 # Title of your site
 title = "Tony Lam"
 
+# Post css
+WC_POST_CSS="true"
+
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "https://tonylam.tech/"
