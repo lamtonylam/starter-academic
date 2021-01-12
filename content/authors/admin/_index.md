@@ -79,7 +79,8 @@ user_groups:
 
 Hi! I'm Tony. 
 
-I'm creative, curious, positive, and a fast learner.
+I'm currently studying for a high school diploma at Helsinki High School of Natural Sciences.
+I'm positive, proactive and a fast learner.
 
 For the most up to date information about me, please refer to my LinkedIn profile.
 
