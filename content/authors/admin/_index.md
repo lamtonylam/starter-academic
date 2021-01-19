@@ -15,7 +15,7 @@ role: Student at Helsinki High School of Natural Sciences / Helsingin luonnontie
 # Organizations/Affiliations
 organizations:
 - name: Helsinki High School of Natural Sciences
-  url: "https://www.hel.fi/heltiedelu/fi"
+  url: "https://www.hel.fi/heltiedelu/fi/hae-meille/in-english/in-english"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My interests include programming, ICT and gaming.
