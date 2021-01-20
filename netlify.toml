@@ -27,7 +27,7 @@
 # REDIRECTS custom    
 [[redirects]]
 from = "/opkh"
-to = "https://ehdokas.tonylam.tech"
+to = "https://tonylam.tech/?utm_source=opkh_redirect"
 status = 301
 force = false
 
