@@ -16,7 +16,7 @@ fi
 function update_wowchemy () {
   # Update Wowchemy to the latest master version
   echo -e "Updating Wowchemy to the latest master version...\n"
-  hugo mod get github.com/wowchemy/wowchemy-hugo-modules/wowchemy/@master
+  hugo mod get github.com/wowchemy/wowchemy-hugo-modules/wowchemy/@main
   hugo mod tidy
 }
 
